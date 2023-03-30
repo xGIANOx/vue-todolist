@@ -10,15 +10,17 @@
 </head>
 <body>
     <div id="app">
-        <h1>TODO LIST</h1>
-        <div class="todo_list">
+        <h1 class="text-center mt-2">TODO LIST</h1>
+        <div class="todo_list text-center mt-5">
             <input type="text" v-model="newTask" @keyup.enter="addToList()">
             <button @click="addToList()">Add task</button>
-            <ul>
-                <li v-for="(task, i) in tasks" :class="{'done' : task.done}" @click="taskDone(i)">
-                    {{task.text}} <span @click="remove(i)"><button>X</button></span>
-                </li>
-            </ul>
+            <div class="container_xs">
+                <ul class="list-unstyled mt-5 text-start d-flex align-items-center flex-column">
+                    <li v-for="(task, i) in tasks" :class="{'done' : task.done}" @click="taskDone(i)" class="mt-2">
+                        {{task.text}} <span @click="remove(i)"><button>X</button></span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     

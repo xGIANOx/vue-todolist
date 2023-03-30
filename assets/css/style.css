@@ -1,3 +1,8 @@
 .done{
     text-decoration: line-through;
 }
+
+.container_xs{
+    width: 40%;
+    margin: auto;
+}
