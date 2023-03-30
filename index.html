@@ -12,6 +12,8 @@
     <div id="app">
         <h1>TODO LIST</h1>
         <div class="todo_list">
+            <input type="text" v-model="newTask">
+            <button @click="addToList()">Add task</button>
             <ul>
                 <li v-for="(task, i) in tasks" :class="{'done' : task.done}">
                     {{task.text}} <span @click="remove(i)"><button>X</button></span>
