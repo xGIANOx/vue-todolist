@@ -27,6 +27,10 @@ const { createApp } = Vue
         addToList() {
             this.tasks.push({text: this.newTask, done: false});
             this.newTask = "";
-          }
+        },
+        taskDone(i){
+            console.log('fatto');
+            this.tasks[i].done = !this.tasks[i].done
+        }
     }
   }).mount('#app')
