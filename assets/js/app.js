@@ -18,5 +18,10 @@ const { createApp } = Vue
             }
         ]
       }
+    },
+    methods : {
+        remove(i){
+            this.tasks.splice(i, 1)
+        }
     }
   }).mount('#app')
